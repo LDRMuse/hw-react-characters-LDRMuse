@@ -1,5 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 export const Form = () => {
-  return <p> Im a Form</p>
+  return (
+    <Fragment>
+      <form>
+    <label>Add Character</label>
+    <input type="text"></input>
+  </form>
+    </Fragment>
+
+    )
 }

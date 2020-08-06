@@ -1,7 +1,16 @@
 import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
+import { Person } from './Person'
 
 export const Table = ({people}) => {
+
+
+  const renderPeople = () => {
+    return people.map(({ job, name }, i) => {
+      return <Person job={job} key={i} name={name} />
+    })
+  }
+
   return (
 
     <Fragment>
@@ -14,10 +23,7 @@ export const Table = ({people}) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{people.name}</td>
-          <td>{people.job}</td>
-        </tr>
+      {renderPeople()}
       </tbody>
     </table>
     </Fragment>
