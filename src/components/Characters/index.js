@@ -6,6 +6,7 @@ import api from 'api'
 
 export const Characters = () => {
   const [people, setPeople] = useState([])
+  const [filterTxt, setFilterTxt] = useState('')
 
 useEffect(() => {
     (async () => {
@@ -13,6 +14,13 @@ useEffect(() => {
       setPeople(data)
     })()
   }, [])
+
+
+  const handleSearchChange = ({target: {value}}) => {
+    setFilterTxt(value)
+
+  }
+
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -23,6 +31,7 @@ useEffect(() => {
   return (
     <main>
     <Table people={people}/>
+    <input type='search' onChange={handleSearchChange} />
     <Form handler={submitHandler}/>
     </main>
   )

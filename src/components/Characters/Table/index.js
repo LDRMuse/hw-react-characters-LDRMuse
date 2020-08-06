@@ -2,11 +2,15 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import { Person } from './Person'
 
-export const Table = ({people}) => {
+export const Table = ({people, filterTxt}) => {
 
 
   const renderPeople = () => {
-    return people.map(({ job, name }, i) => {
+    return people.filter(({name}) =>
+    filterTxt ?
+    name.toLowerCase().startsWith(filterTxt.toLowerCase())
+    : true
+    ).map(({ job, name }, i) => {
       return <Person job={job} key={i} name={name} />
     })
   }
@@ -31,5 +35,6 @@ export const Table = ({people}) => {
 }
 
 Table.propTypes = {
-  people: PropTypes.array.isRequired
+  people: PropTypes.array.isRequired,
+  filterTxt: PropTypes.string.isRequired
 }
