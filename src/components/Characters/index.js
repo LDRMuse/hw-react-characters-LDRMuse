@@ -6,17 +6,18 @@ import api from 'api'
 export const Characters = () => {
   const [people, setPeople] = useState([])
 
-  useEffect(() => {
+const searchHandler = useEffect(() => {
     (async () => {
       const data = await api.index()
       setPeople(data)
     })()
   }, [])
 
+
   return (
     <main>
-    <Table />
-    <Form />
+    <Table people={people}/>
+    <Form handler={searchHandler}/>
     </main>
   )
 
