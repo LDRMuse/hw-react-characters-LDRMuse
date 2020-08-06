@@ -24,13 +24,16 @@ useEffect(() => {
 
   const submitHandler = (event) => {
     event.preventDefault()
-    console.log('clicked')
+    const [newName, newJob] = event.target.elements
+    console.log(newName.value, newJob.value)
+    setPeople(prev => prev.concat({'name': newName.value, 'job': newJob.value}))
+
 
   }
 
   return (
     <main>
-    <Table people={people}/>
+  <Table people={people} filterTxt={filterTxt}/>
     <input type='search' onChange={handleSearchChange} />
     <Form handler={submitHandler}/>
     </main>

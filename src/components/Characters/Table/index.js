@@ -36,5 +36,5 @@ export const Table = ({people, filterTxt}) => {
 
 Table.propTypes = {
   people: PropTypes.array.isRequired,
-  filterTxt: PropTypes.string.isRequired
+  filterTxt: PropTypes.string
 }

@@ -10,7 +10,7 @@ export const Form = ({ handler }) => {
         <input placeholder="First Name Only" type="text"
           id="firstName" />
         <input placeholder="Job Description" type="text"
-          id="email" />
+          id="job" />
         <button type="Submit">Add Character</button>
       </form>
     </Fragment>
