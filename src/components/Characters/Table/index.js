@@ -18,8 +18,8 @@ export const Table = ({people, filterTxt}) => {
   return (
 
     <Fragment>
-    <h1>Characters</h1>
-    <table>
+    <h1 className='title is-2'>Characters</h1>
+    <table className='table'>
       <thead>
         <tr>
           <th>Name</th>

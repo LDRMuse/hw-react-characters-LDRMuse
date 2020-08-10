@@ -6,13 +6,19 @@ export const Form = ({ handler }) => {
 
   return (
     <Fragment>
-      <form onSubmit={handler}>
-        <input placeholder="First Name Only" type="text"
-          id="firstName" />
-        <input placeholder="Job Description" type="text"
-          id="job" />
-        <button type="Submit">Add Character</button>
-      </form>
+      <div className="field" onSubmit = { handler }>
+  <label className="label">Name</label>
+  <div className="control">
+    <input id="firstname" className="input" type="text" placeholder="First Name Only" />
+  </div>
+</div>
+
+<div className="field">
+  <label className="label">Job</label>
+  <div className="control">
+    <input id='job' className="input" type="email" placeholder="Job Description" />
+  </div>
+</div>
     </Fragment>
 
   )
