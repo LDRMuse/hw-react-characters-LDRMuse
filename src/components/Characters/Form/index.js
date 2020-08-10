@@ -6,24 +6,26 @@ export const Form = ({ handler }) => {
 
   return (
     <Fragment>
-      <div className="field" onSubmit={handler}>
+      <form className="field" onSubmit={handler}>
+      <div></div>
         <label className="label">Name</label>
         <div className="control">
           <input id="firstname" className="input is-primary" type="text" placeholder="First Name Only" />
         </div>
-      </div>
 
-      <div className="field">
+
+
         <label className="label">Job</label>
         <div className="control">
-          <input id='job' className="input is-primary" type="email" placeholder="Job Description" />
+          <input id="job" className="input is-primary" type="text" placeholder="Job Description" />
         </div>
-      </div>
+        <button className="button" type="Submit">Add Character</button>
+      </form>
     </Fragment>
 
   )
 }
 
 Form.propTypes = {
-  handler: PropTypes.func,
+  handler: PropTypes.func.isRequired,
 }
