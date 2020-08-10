@@ -14,7 +14,7 @@ export const Table = ({people, filterTxt}) => {
       return <Person job={job} key={i} name={name} />
     })
   }
-
+// TODO: Center table with flexbox?
   return (
 
     <Fragment>
