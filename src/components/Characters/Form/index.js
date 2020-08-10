@@ -19,7 +19,7 @@ export const Form = ({ handler }) => {
         <div className="control">
           <input id="job" className="input is-primary" type="text" placeholder="Job Description" />
         </div>
-        <button className="button" type="Submit">Add Character</button>
+        <button className="button is-primary" type="Submit">Add Character</button>
       </form>
     </Fragment>
 
