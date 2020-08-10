@@ -34,7 +34,12 @@ useEffect(() => {
   return (
     <main>
   <Table people={people} filterTxt={filterTxt}/>
-    <input type='search' onChange={handleSearchChange} />
+  <div className="field">
+  <label className="label">Search</label>
+  <div className="control">
+    <input className="input" onChange={handleSearchChange} type="search" placeholder="Text input" />
+  </div>
+</div>
     <Form handler={submitHandler}/>
     </main>
   )
